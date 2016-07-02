@@ -172,7 +172,7 @@ public class Login extends JDialog {
 
             @Override
             public void run() {
-                callback.submit(token);
+                callback.submit(token, user);
             }
         });
     }//GEN-LAST:event_loginButtonActionPerformed

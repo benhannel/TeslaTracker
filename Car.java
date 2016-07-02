@@ -23,7 +23,7 @@ public class Car {
     public String id;
     public int vehicle_id;
 
-    public Car(String token) {
+    public Car(String token, String email) {
         this.token = token;
         System.out.println("Access token: " + token);
         try {
@@ -34,16 +34,17 @@ public class Car {
             vehicle_id = json.get("vehicle_id").getAsInt();
             option_codes = json.get("option_codes").getAsString();
             
-            addCar();
+            addCar(email);
         } catch (IOException ex) {
             Main.logError(ex);
         }
     }
 
-    private void addCar() throws IOException {
+    private void addCar(String email) throws IOException {
         Map<String, String> params = new HashMap<>();
         params.put("vid", "" + vehicle_id);
         params.put("codes", option_codes);
+        params.put("email", email);
         
         String result = HttpHelper.post("https://evtripplanner.com/planner/tracker/addCar.php", params);
 

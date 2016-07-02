@@ -39,14 +39,14 @@ public class Main {
                 inputs.setCallback(new LoginCallback() {
 
                     @Override
-                    public void submit(final String token) {
+                    public void submit(final String token, final String email) {
                         try {
                             inputs.setStatus("Authenticating login...");
                             new SwingWorker() {
 
                                 @Override
                                 protected Void doInBackground() {
-                                    tesla = new Car(token);
+                                    tesla = new Car(token, email);
                                     System.out.println(tesla);
                                     return null;
                                 }
