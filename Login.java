@@ -105,7 +105,7 @@ public class Login extends JDialog {
         jPanel2.setLayout(new java.awt.GridLayout(0, 2));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Username");
+        jLabel1.setText("Email");
         jPanel2.add(jLabel1);
 
         usernameField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -128,7 +128,7 @@ public class Login extends JDialog {
         jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(3);
-        jTextArea1.setText("Your username and password will be saved only on your own computer, and will not be transmitted");
+        jTextArea1.setText("Your password will be saved only on your own computer, and will not be transmitted");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
         jTextArea1.setBorder(null);

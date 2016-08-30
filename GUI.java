@@ -84,7 +84,7 @@ public class GUI extends javax.swing.JFrame {
         lastUpdate = new javax.swing.JFormattedTextField();
         javax.swing.JLabel jLabel7 = new javax.swing.JLabel();
         vidLabel = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
         numPointsLabel = new javax.swing.JLabel();
         viewLocation = new javax.swing.JButton();
         aboutButton = new javax.swing.JButton();
@@ -192,7 +192,7 @@ public class GUI extends javax.swing.JFrame {
     private void aboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutButtonActionPerformed
         try {
             Desktop.getDesktop().browse(
-                    new URI("http://evtripplanner.com/tracker_about.php"));
+                    new URI("http://evtripplanner.com/planner/tracker/tracker_about.php"));
         } catch (URISyntaxException | IOException ex) {
             ex.printStackTrace();
             Main.logError(ex);
@@ -202,7 +202,6 @@ public class GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aboutButton;
     private javax.swing.JLabel coords;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JFormattedTextField lastUpdate;
     private javax.swing.JLabel mapLabel;
